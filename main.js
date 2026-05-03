@@ -204,3 +204,79 @@ for (let i = 0; i < personajes.length; i++) {
     `${personajes[i].nombre} es ${personajes[i].tipo} y está en nivel ${personajes[i].nivel}`
   );
 }
+
+//ejercicio 19
+const personajes = [
+  { nombre: "Luna", vida: 100, tipo: "maga", nivel: 3 },
+  { nombre: "Kai", vida: 120, tipo: "guerrero", nivel: 4 },
+  { nombre: "Nina", vida: 90, tipo: "arquera", nivel: 2 }
+];
+
+const personajesFuertes = personajes.filter((personaje) => {
+  return personaje.nivel >= 3;
+});
+
+console.log(personajesFuertes);
+
+//ejercicio 20
+const personajes = [
+  { nombre: "Luna", vida: 100, tipo: "maga", nivel: 3 },
+  { nombre: "Kai", vida: 120, tipo: "guerrero", nivel: 4 },
+  { nombre: "Nina", vida: 90, tipo: "arquera", nivel: 2 }
+];
+
+const nombres = personajes.map((personaje) => {
+  return personaje.nombre;
+});
+
+console.log(nombres);
+
+//ejercicio 21
+const personajes = [
+  { nombre: "Luna", vida: 100, tipo: "maga", nivel: 3 },
+  { nombre: "Kai", vida: 120, tipo: "guerrero", nivel: 4 },
+  { nombre: "Nina", vida: 90, tipo: "arquera", nivel: 2 }
+];
+
+const personajeEncontrado = personajes.find((personaje) => {
+  return personaje.nombre === "Kai";
+});
+
+console.log(personajeEncontrado);
+
+//ejercicio 22
+const personajes = [
+  { nombre: "Luna", vida: 100, tipo: "maga", nivel: 3 },
+  { nombre: "Kai", vida: 120, tipo: "guerrero", nivel: 4 },
+  { nombre: "Nina", vida: 90, tipo: "arquera", nivel: 2 }
+];
+
+const vidaTotal = personajes.reduce((acumulador, personaje) => {
+  return acumulador + personaje.vida;
+}, 0);
+
+console.log(vidaTotal);
+
+//ejercicio 23
+const mensaje = document.getElementById("mensaje");
+
+mensaje.textContent = "Bienvenido a la guía de JavaScript";
+
+// Desafío extra: cambiar color
+mensaje.style.color = "blue";
+
+//ejercicio 24
+const boton = document.getElementById("btn");
+const mensaje = document.getElementById("mensaje");
+
+let puntos = 0;
+
+boton.addEventListener("click", function () {
+  // sumar puntos
+  puntos += 10;
+
+  // mostrar resultado
+  mensaje.textContent = "Puntos: " + puntos;
+});
+
+
