@@ -279,4 +279,35 @@ boton.addEventListener("click", function () {
   mensaje.textContent = "Puntos: " + puntos;
 });
 
+//ejercicio 25
+const input = document.getElementById("dato");
+const boton = document.getElementById("btn");
+const mensaje = document.getElementById("mensaje");
+
+boton.addEventListener("click", function () {
+  const nombre = input.value;
+
+  if (nombre === "") {
+    mensaje.textContent = "Ingresá un nombre para continuar";
+  } else {
+    mensaje.textContent = "Bienvenido/a, " + nombre;
+  }
+});
+
+//ejercicio 26
+const jugador = {
+  nombre: "Luna",
+  puntaje: 1500
+};
+
+// guardar en localStorage
+localStorage.setItem("jugador", JSON.stringify(jugador));
+
+// recuperar desde localStorage
+const jugadorGuardado = JSON.parse(localStorage.getItem("jugador"));
+
+// mostrar por consola
+console.log(jugadorGuardado);
+
+
 
